@@ -1,0 +1,27 @@
+* CRM Investigation using component design.
+This is an investigation on how we can build decoupled components within Elixir to build assemblies (we can't use  the term applications as they have other meanings within Erlang/Elixir).
+** The premise
+Build a set of components and bring them together to build custom CRM's for each domain. For example, this repository is looking at building an education CRM system. The CRM is designed to be used by education organizations, looking to manage:
+*** Teachers
+*** Students
+*** Lessons
+*** Attendance
+*** Parents
+*** Messaging
+*** Finance
+*** Reporting
+*** Events
+*** Calendar
+** Use components to build other CRM's
+We could take some of the above components and build a CRM for a charity, building specific components, for example:
+*** Donation
+*** Projects
+*** Messaging
+*** Events
+*** Calendar
+*** Leads
+*** Foundation
+** Inspiration
+Inspiration to build applications this way has come from a few talks Dave Thomas has been giving for the past couple of years.
+** Ignore persistence
+To focus on modeling the domain, I am going to ignore how data is going to be persisted. Persistence can be another external concern and does not have any place within the domain.
