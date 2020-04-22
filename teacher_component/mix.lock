@@ -1,3 +1,4 @@
 %{
   "memento": {:hex, :memento, "0.3.1", "b2909390820550d8b90b68ec96f9e15ff8a45a28b6f97fa4a62ef50e87c2f9d9", [:mix], [], "hexpm", "ff8fc66255d21dcd539c5d77a0b5458715bf3efec91b389dd06017bbb4e2e916"},
+  "mox": {:hex, :mox, "0.5.2", "55a0a5ba9ccc671518d068c8dddd20eeb436909ea79d1799e2209df7eaa98b6c", [:mix], [], "hexpm", "df4310628cd628ee181df93f50ddfd07be3e5ecc30232d3b6aadf30bdfe6092b"},
 }
