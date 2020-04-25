@@ -44,8 +44,10 @@ matrix:
 
 
 sudo: false
+before_script
+  - cd teacher_component
 script:
-  - cd teacher_component && mix test
+  - mix test
 after_script:
-  - cd teacher_component && MIX_ENV=docs mix deps.get
-  - cd teacher_component && MIX_ENV=docs mix inch.report
+  - MIX_ENV=docs mix deps.get
+  - MIX_ENV=docs mix inch.report
