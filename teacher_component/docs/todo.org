@@ -1,0 +1,23 @@
+* Development
+** Teacher Component
+*** DONE : Create a component that allows the implementation to be configurable via at runtime.
+**** Use this [[https://aaronrenner.io/2019/09/18/application-layering-a-pattern-for-extensible-elixir-application-design.html][blog post]] as a starting point for the architecture
+After playing with the architecture, it does seem that there are too many levels of abstraction before you get to the actual database interaction.
+
+For this reason I have decided to use a simple adapter pattern that I have seen being used in the [[https://github.com/sheharyarn/que/blob/master/lib/que/persistence/persistence.ex#L14][Que codebase]]
+
+I am also not happy with the naming Impl for the modules. For now I am sticking with it though.
+**** Plug in Persistence layer database
+I have decided to use the [[https://github.com/sheharyarn/memento][Memento]] Mnesia wrapper.
+
+*** DONE : Create a Teacher Store
+**** TODO : Write a mix task to seed sample teachers
+**** TODO : Write tests to check public API
+*** TODO Create a Lesson Store
+Retrieve all lessons for a given teacher.
+**** TODO : Write a mix task to seed sample lessons
+**** TODO : Write tests to check public API
+*** TODO : Create a Child Store
+Retrieve all children for a given lesson and teacher
+**** TODO : Write a mix task to seed sample children
+**** TODO : Write tests to check public API
