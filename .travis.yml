@@ -47,5 +47,5 @@ sudo: false
 script:
   - cd teacher_component && mix test
 after_script:
-  - MIX_ENV=docs mix deps.get
-  - MIX_ENV=docs mix inch.report
+  - cd teacher_component && MIX_ENV=docs mix deps.get
+  - cd teacher_component && MIX_ENV=docs mix inch.report
