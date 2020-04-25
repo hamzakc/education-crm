@@ -44,7 +44,7 @@ matrix:
 
 
 sudo: false
-before_script
+before_script:
   - cd teacher_component
 script:
   - mix test
