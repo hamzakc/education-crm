@@ -1,4 +1,6 @@
+[[https://travis-ci.com/hamzakc/education-crm.svg?branch=master]]
 * CRM Investigation using component design.
+
 This is an investigation on how we can build decoupled components within Elixir to build assemblies (we can't use  the term applications as they have other meanings within Erlang/Elixir).
 ** The premise
 Build a set of components and bring them together to build custom CRM's for each domain. For example, this repository is looking at building an education CRM system. The CRM is designed to be used by education organizations, looking to manage:
