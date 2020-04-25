@@ -1,4 +1,4 @@
-defmodule TeacherComponent.DefaultImpl.TeacherStore.Mensia.DB do
+defmodule TeacherComponent.DefaultImpl.TeacherStore.Mnesia.DB do
   @moduledoc false
 
   # Memento Table Definition

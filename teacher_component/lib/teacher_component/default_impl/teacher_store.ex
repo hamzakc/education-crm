@@ -7,7 +7,7 @@ defmodule TeacherComponent.DefaultImpl.TeacherStore do
 	end
 
 	def impl() do
-    Application.get_env(:teacher_component, :teacher_store, __MODULE__.Mensia)
+    Application.get_env(:teacher_component, :teacher_store, __MODULE__.Mnesia)
   end
 
 	# Macro so future adapters `use` this module

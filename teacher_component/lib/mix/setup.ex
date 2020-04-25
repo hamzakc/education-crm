@@ -50,6 +50,6 @@ defmodule Mix.Tasks.TeacherComponent.Setup do
 
   @doc false
   def run(_) do
-    TeacherComponent.DefaultImpl.TeacherStore.Mensia.setup!
+    TeacherComponent.DefaultImpl.TeacherStore.Mnesia.setup!
   end
 end

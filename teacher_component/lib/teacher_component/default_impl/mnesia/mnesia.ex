@@ -1,4 +1,4 @@
-defmodule TeacherComponent.DefaultImpl.TeacherStore.Mensia do
+defmodule TeacherComponent.DefaultImpl.TeacherStore.Mnesia do
 	use TeacherComponent.DefaultImpl.TeacherStore
 
   @config [db: DB, table: Teachers]
