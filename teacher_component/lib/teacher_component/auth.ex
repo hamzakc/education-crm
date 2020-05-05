@@ -1,5 +1,5 @@
 defmodule TeacherComponent.Auth do
-  alias TeacherComponent.{Teacher}
+  alias CrmCore.{Teacher}
 
   def load(email, password) do
     authenticate(email, password)
