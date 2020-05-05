@@ -23,7 +23,8 @@ defmodule TeacherComponent.MixProject do
   defp deps do
     [
       {:memento,  "~> 0.3.1"},
-      {:mox, "~> 0.5", only: :test}
+      {:mox, "~> 0.5", only: :test},
+			{:crm_core, path: "../crm_core"}
     ]
   end
 

@@ -37,10 +37,10 @@ defmodule TeacherComponent.DefaultImpl.TeacherStore.Mnesia.DB do
       end
     end
 
-    # Convert Mnesia DB Teacher to TeacherComponent.Teacher
+    # Convert Mnesia DB Teacher to CrmCore.Teacher
     defp to_teacher_component_teacher(nil), do: {:error, :not_found}
     defp to_teacher_component_teacher(%@store{} = teacher) do
-      {:ok, struct(TeacherComponent.Teacher, Map.from_struct(teacher))}
+      {:ok, struct(CrmCore.Teacher, Map.from_struct(teacher))}
     end
 
     # Read to Table

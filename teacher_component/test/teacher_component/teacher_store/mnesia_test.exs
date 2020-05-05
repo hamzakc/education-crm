@@ -31,6 +31,6 @@ defmodule TeacherComponent.DefaultImpl.TeacherStore.MnesiaTest do
   test "#find gets a teacher by its id" do
     [_, _, s | _] = Helpers.Mnesia.create_sample_teachers
 
-    assert {:ok, struct(TeacherComponent.Teacher, Map.from_struct(s))} == Mnesia.find(3)
+    assert {:ok, struct(CrmCore.Teacher, Map.from_struct(s))} == Mnesia.find(3)
   end
 end

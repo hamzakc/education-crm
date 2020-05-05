@@ -29,7 +29,7 @@ defmodule TeacherComponent.DefaultImplTest do
 		created_at = nil
 		updated_at = nil
 
-		teacher = %TeacherComponent.Teacher{
+		teacher = %CrmCore.Teacher{
 			id: id,
 			email: email,
 			first_name: first_name,

@@ -1,5 +1,5 @@
 defmodule TeacherComponent.DefaultImpl.TeacherStore do
-	alias TeacherComponent.Teacher
+	alias CrmCore.Teacher
 
 	@callback find(teacher_id :: integer) :: Teacher.t | nil
 	def find(teacher_id) do
