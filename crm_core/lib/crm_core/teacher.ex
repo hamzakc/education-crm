@@ -1,4 +1,4 @@
-defmodule TeacherComponent.Teacher do
+defmodule CrmCore.Teacher do
 	defstruct(
 		id: nil,
 		email: nil,

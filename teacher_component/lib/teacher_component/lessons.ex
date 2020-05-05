@@ -1,5 +1,6 @@
 defmodule TeacherComponent.Lessons do
-	alias TeacherComponent.{Teacher, Lesson}
+	alias TeacherComponent.{Lesson}
+	alias CrmCore.Teacher
 
 	# Get all lessons associated to the teacher
 	def all(teacher = %Teacher{}) do

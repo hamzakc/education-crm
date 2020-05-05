@@ -2,7 +2,7 @@ defmodule TeacherComponent.DefaultImpl do
 	@behaviour TeacherComponent.Impl
 
 	alias __MODULE__.TeacherStore
-	alias TeacherComponent.Teacher
+	alias CrmCore.Teacher
 
 	@impl true
 	def find_teacher(teacher_id) do
