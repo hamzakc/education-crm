@@ -1,8 +1,8 @@
 defmodule LessonComponent do
   @behaviour __MODULE__.Impl
 
-	@impl true
-	def lessons(teacher_id) do
+  @impl true
+  def lessons(teacher_id) do
     current_impl().lessons(teacher_id)
   end
 
