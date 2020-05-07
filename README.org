@@ -25,5 +25,4 @@ We could take some of the above components and build a CRM for a charity, buildi
 *** Foundation
 ** Inspiration
 Inspiration to build applications this way has come from a few talks Dave Thomas has been giving for the past couple of years.
-** Ignore persistence
-To focus on modeling the domain, I am going to ignore how data is going to be persisted. Persistence can be another external concern and does not have any place within the domain.
+
