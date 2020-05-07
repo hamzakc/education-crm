@@ -13,7 +13,6 @@ defmodule Crm do
 
   # Find Teacher for given teacher id
 	def teacher(teacher = %Teacher{id: teacher_id}) do
-		IO.puts "Teacher ID "
 		current_impl().teacher(teacher_id)
 	end
 
@@ -28,6 +27,7 @@ defmodule Crm do
 
 	# Find all lessons tought by the teacher
 	def lessons(teacher = %Teacher{id: teacher_id}) do
+		current_impl().lessons(teacher_id)
 	end
 
 	def lessons(child = %Child{id: child_id}) do

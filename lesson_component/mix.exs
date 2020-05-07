@@ -1,13 +1,14 @@
-defmodule Crm.MixProject do
+defmodule LessonComponent.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :crm,
+      app: :lesson_component,
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      elixirc_paths: elixirc_paths(Mix.env)
     ]
   end
 
@@ -21,10 +22,13 @@ defmodule Crm.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-			{:ex_doc, "~> 0.21", only: :dev, runtime: false},
 			{:crm_core, path: "../crm_core"},
-			{:teacher_component, path: "../teacher_component"},
-			{:lesson_component, path: "../lesson_component"}
+      {:memento,  "~> 0.3.1"},
+      {:mox, "~> 0.5", only: :test},
     ]
   end
+
+	# Compilation Paths
+  defp elixirc_paths(:dev),  do: elixirc_paths(:test)
+  defp elixirc_paths(:test), do: ["lib", "test/support.ex"]
 end

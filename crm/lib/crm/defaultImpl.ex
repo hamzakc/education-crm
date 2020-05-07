@@ -10,4 +10,15 @@ defmodule Crm.DefaultImpl do
 				err -> err
 		end
 	end
+
+	@impl true
+	def lessons(teacher_id) do
+    with {:ok, [lesson]} <- LessonComponent.lessons(teacher_id)
+			do
+			  {:ok, [lesson]}
+			else
+				err -> err
+		end
+	end
+
 end
