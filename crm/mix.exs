@@ -23,7 +23,8 @@ defmodule Crm.MixProject do
     [
 			{:ex_doc, "~> 0.21", only: :dev, runtime: false},
 			{:crm_core, path: "../crm_core"},
-			{:teacher_component, path: "../teacher_component"}
+			{:teacher_component, path: "../teacher_component"},
+			{:lesson_component, path: "../lesson_component"}
     ]
   end
 end
