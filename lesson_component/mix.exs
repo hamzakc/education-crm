@@ -31,4 +31,5 @@ defmodule LessonComponent.MixProject do
   # Compilation Paths
   defp elixirc_paths(:dev), do: elixirc_paths(:test)
   defp elixirc_paths(:test), do: ["lib", "test/support.ex"]
+  defp elixirc_paths(_),     do: ["lib"]
 end
