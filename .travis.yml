@@ -28,9 +28,9 @@ jobs:
       otp_release: 22.0
 
 before_install:
-  - cd teacher_component
+  - cd scripts
 script:
-  - mix test
+  - ./run_tests
 after_script:
   - MIX_ENV=docs mix deps.get
   - MIX_ENV=docs mix inch.report
