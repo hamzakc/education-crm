@@ -45,10 +45,10 @@ defmodule LessonComponent.DefaultImpl.LessonStore.Mnesia.DB do
     end
 
     # Returns teacher ID
-    defp normalize_id(teacher) do
+    defp normalize_id(lesson) do
       cond do
-        is_map(teacher) -> teacher.id
-        true -> teacher
+        is_map(lesson) -> lesson.id
+        true -> lesson
       end
     end
 
@@ -56,7 +56,7 @@ defmodule LessonComponent.DefaultImpl.LessonStore.Mnesia.DB do
     defp to_lesson(nil), do: {:error, :not_found}
 
     defp to_lesson(%@store{} = lesson) do
-      {:ok, struct(CrmCore.Lesson, Map.from_struct(lesson))}
+      struct(CrmCore.Lesson, Map.from_struct(lesson))
     end
 
     # Read to Table
