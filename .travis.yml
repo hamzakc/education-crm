@@ -30,4 +30,4 @@ jobs:
 install: skip
 
 script:
-  - ./scripts/run_tests
+  - ./scripts/run_tests.sh

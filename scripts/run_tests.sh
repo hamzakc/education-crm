@@ -1,3 +1,6 @@
+#!/bin/bash
+set -ev
+
 cd teacher_component/
 echo 'Running tests for teacher component'
 mix deps.get --only test && mix test
