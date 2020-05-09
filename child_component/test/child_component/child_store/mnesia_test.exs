@@ -31,6 +31,6 @@ defmodule ChildComponent.DefaultImpl.ChildStore.MnesiaTest do
   test "#children_with_teacher gets a list of children associated to a teacher id" do
     [_, _, s | _] = Helpers.Mnesia.create_sample_children
 
-    assert [struct(CrmCore.Child, Map.from_struct(s))] == Mnesia.children_with_teacher(3)
+    assert [struct(CrmCore.Child, Map.from_struct(s))] == Mnesia.children(3)
   end
 end

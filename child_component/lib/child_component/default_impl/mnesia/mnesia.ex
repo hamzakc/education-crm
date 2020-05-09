@@ -25,7 +25,7 @@ defmodule ChildComponent.DefaultImpl.ChildStore.Mnesia do
     Memento.Table.create!(@store, disc_copies: nodes)
   end
 
-  @doc "Returns the Mnesia configuration for Lesson Component"
+  @doc "Returns the Mnesia configuration for Child Component"
   @spec __config__ :: Keyword.t()
   def __config__ do
     [

@@ -15,9 +15,9 @@ defmodule ChildComponent.DefaultImpl.ChildStore.Mnesia.DB do
 				:dob,
 				:gender,
         :created_at,
-        :updated_at
+        :updated_at,
       ],
-      index: [:code, :teacher_id],
+      index: [:teacher_id],
       type: :ordered_set,
       autoincrement: true
 
