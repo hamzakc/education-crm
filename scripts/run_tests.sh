@@ -11,3 +11,9 @@ echo 'Running tests for lesson component'
 mix local.hex --force
 mix deps.get --only test
 mix test
+
+cd ../child_component/
+echo 'Running tests for child component'
+mix local.hex --force
+mix deps.get --only test
+mix test

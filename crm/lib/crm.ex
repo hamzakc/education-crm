@@ -39,7 +39,8 @@ defmodule Crm do
 	def lessons(subject = %Subject{id: subject_id}, lesson = %Lesson{id: lesson_id}) do
 	end
 
-	def children(teacher = %Teacher{}) do
+	def children(teacher = %Teacher{id: teacher_id}) do
+		current_impl().children(teacher)
 	end
 
 	def children(lesson = %Lesson{}) do
