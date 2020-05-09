@@ -30,4 +30,15 @@ defmodule Crm.DefaultImpl do
 				err -> err
 		end
 	end
+
+	@impl true
+	def subject(subject) do
+    with {:ok, [subject]} <- SubjectComponent.subject(subject.id)
+			do
+			  {:ok, [subject]}
+			else
+				err -> err
+		end
+	end
+
 end
