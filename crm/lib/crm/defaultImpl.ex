@@ -21,4 +21,13 @@ defmodule Crm.DefaultImpl do
 		end
 	end
 
+	@impl true
+	def children(teacher) do
+    with {:ok, [child]} <- ChildComponent.children(teacher.id)
+			do
+			  {:ok, [child]}
+			else
+				err -> err
+		end
+	end
 end
