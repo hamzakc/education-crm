@@ -20,6 +20,7 @@ defmodule Crm do
 	end
 
 	def subject(subject = %Subject{id: subject_id}) do
+		current_impl().subject(subject)
 	end
 
 	def lesson(lesson = %Lesson{id: lesson_id}) do

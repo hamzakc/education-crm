@@ -1,9 +1,9 @@
-defmodule ChildComponent.MixProject do
+defmodule SubjectComponent.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :child_component,
+      app: :subject_component,
       version: "0.1.0",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
@@ -28,10 +28,8 @@ defmodule ChildComponent.MixProject do
     ]
   end
 
-
   # Compilation Paths
   defp elixirc_paths(:dev), do: elixirc_paths(:test)
   defp elixirc_paths(:test), do: ["lib", "test/support.ex"]
   defp elixirc_paths(_),     do: ["lib"]
-
 end
