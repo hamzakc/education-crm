@@ -1,5 +1,5 @@
 defmodule Crm.DefaultImpl do
-	@behaviour __MODULE__.Impl
+	@behaviour Crm.Impl
 
 	@impl true
 	def teacher(teacher_id) do
@@ -41,4 +41,13 @@ defmodule Crm.DefaultImpl do
 		end
 	end
 
+	@impl true
+	def class(class_id) do
+    with {:ok, class} <- ClassComponent.find_class(class_id)
+			do
+			  {:ok, class}
+			else
+				err -> err
+		end
+	end
 end

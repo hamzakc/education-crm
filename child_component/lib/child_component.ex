@@ -5,9 +5,9 @@ defmodule ChildComponent do
 
   @behaviour __MODULE__.Impl
 
-	def children(teacher_id) do
+  def children(teacher_id) do
     current_impl().children(teacher_id)
-	end
+  end
 
   @doc false
   defp current_impl do

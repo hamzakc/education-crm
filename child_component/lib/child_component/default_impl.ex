@@ -9,6 +9,7 @@ defmodule ChildComponent.DefaultImpl do
     case ChildStore.children(teacher_id) do
       [%Child{}] = children ->
         {:ok, children}
+
       [] ->
         {:error, :not_found}
     end

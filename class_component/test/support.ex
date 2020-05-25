@@ -78,26 +78,25 @@ defmodule ClassComponent.Test.Meta do
 					Memento.Query.write(%ClassComponent.DefaultImpl.ClassStore.Mnesia.DB.Classes{
           id: 1,
 					lesson_id: 1,
-					teacher_id: 2,
+					teacher_id: 1,
+					overview: 'Overview',
 					date: '01/01/2020',
 }),
-					Memento.Query.write(%ChildComponent.DefaultImpl.ChildStore.Mnesia.DB.Children{
+					Memento.Query.write(%ClassComponent.DefaultImpl.ClassStore.Mnesia.DB.Classes{
           id: 2,
+					lesson_id: 2,
 					teacher_id: 2,
-					first_name: 'Joy',
-					last_name: 'Pink',
-					date_joined: '01/01/2020',
-					dob: '01/01/1981',
-					gender: 'F'
+					overview: 'Overview',
+					date: '01/01/2020',
+
 }),
-					Memento.Query.write(%ChildComponent.DefaultImpl.ChildStore.Mnesia.DB.Children{
+					Memento.Query.write(%ClassComponent.DefaultImpl.ClassStore.Mnesia.DB.Classes{
           id: 3,
+					lesson_id: 3,
 					teacher_id: 3,
-					first_name: 'Daniel',
-					last_name: 'Pink',
-					date_joined: '01/01/2020',
-					dob: '01/01/1982',
-					gender: 'M'
+					overview: 'Overview',
+					date: '01/01/2020',
+
 })
 				]
 			end

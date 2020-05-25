@@ -22,16 +22,14 @@ defmodule ChildComponent.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-			{:crm_core, path: "../crm_core"},
-			{:memento, "~> 0.3.1"},
+      {:crm_core, path: "../crm_core"},
+      {:memento, "~> 0.3.1"},
       {:mox, "~> 0.5", only: :test}
     ]
   end
 
-
   # Compilation Paths
   defp elixirc_paths(:dev), do: elixirc_paths(:test)
   defp elixirc_paths(:test), do: ["lib", "test/support.ex"]
-  defp elixirc_paths(_),     do: ["lib"]
-
+  defp elixirc_paths(_), do: ["lib"]
 end
