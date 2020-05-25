@@ -23,3 +23,9 @@ echo 'Running tests for subject component'
 mix local.hex --force
 mix deps.get --only test
 mix test
+
+cd ../class_component/
+echo 'Running tests for class component'
+mix local.hex --force
+mix deps.get --only test
+mix test
