@@ -1,3 +1,4 @@
+# TODO: Need to accomidate multiple teachers for one lesson.
 defmodule CrmCore.Lesson do
 	defstruct(
 		id: nil,

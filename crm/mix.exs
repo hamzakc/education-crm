@@ -25,7 +25,9 @@ defmodule Crm.MixProject do
 			{:crm_core, path: "../crm_core"},
 			{:teacher_component, path: "../teacher_component"},
 			{:lesson_component, path: "../lesson_component"},
-			{:subject_component, path: "../subject_component"}
+			{:subject_component, path: "../subject_component"},
+			{:class_component, path: "../class_component"},
+			{:child_component, path: "../child_component"}
     ]
   end
 end

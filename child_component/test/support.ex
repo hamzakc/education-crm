@@ -31,7 +31,7 @@ defmodule ChildComponent.Test.Meta do
   defmodule Helpers.App do
     # Restarts app and resets DB
     def reset do
-			IO.puts 'I am in reset'
+      IO.puts('I am in reset')
       stop()
       Helpers.Mnesia.reset()
       start()
@@ -73,37 +73,37 @@ defmodule ChildComponent.Test.Meta do
 
     # Creates sample Mnesia jobs
     def create_sample_children do
-			Memento.transaction! fn ->
-				[
-					Memento.Query.write(%ChildComponent.DefaultImpl.ChildStore.Mnesia.DB.Children{
-          id: 1,
-					teacher_id: 1,
-					first_name: 'David',
-					last_name: 'Smith',
-					date_joined: '01/01/2020',
-					dob: '01/01/1997',
-					gender: 'M'
-}),
-					Memento.Query.write(%ChildComponent.DefaultImpl.ChildStore.Mnesia.DB.Children{
-          id: 2,
-					teacher_id: 2,
-					first_name: 'Joy',
-					last_name: 'Pink',
-					date_joined: '01/01/2020',
-					dob: '01/01/1981',
-					gender: 'F'
-}),
-					Memento.Query.write(%ChildComponent.DefaultImpl.ChildStore.Mnesia.DB.Children{
-          id: 3,
-					teacher_id: 3,
-					first_name: 'Daniel',
-					last_name: 'Pink',
-					date_joined: '01/01/2020',
-					dob: '01/01/1982',
-					gender: 'M'
-})
-				]
-			end
+      Memento.transaction!(fn ->
+        [
+          Memento.Query.write(%ChildComponent.DefaultImpl.ChildStore.Mnesia.DB.Children{
+            id: 1,
+            teacher_id: 1,
+            first_name: 'David',
+            last_name: 'Smith',
+            date_joined: '01/01/2020',
+            dob: '01/01/1997',
+            gender: 'M'
+          }),
+          Memento.Query.write(%ChildComponent.DefaultImpl.ChildStore.Mnesia.DB.Children{
+            id: 2,
+            teacher_id: 2,
+            first_name: 'Joy',
+            last_name: 'Pink',
+            date_joined: '01/01/2020',
+            dob: '01/01/1981',
+            gender: 'F'
+          }),
+          Memento.Query.write(%ChildComponent.DefaultImpl.ChildStore.Mnesia.DB.Children{
+            id: 3,
+            teacher_id: 3,
+            first_name: 'Daniel',
+            last_name: 'Pink',
+            date_joined: '01/01/2020',
+            dob: '01/01/1982',
+            gender: 'M'
+          })
+        ]
+      end)
     end
   end
 end
