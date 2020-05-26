@@ -7,7 +7,19 @@ defmodule Crm do
 
   @behaviour __MODULE__.Impl
 
-	alias CrmCore.{Teacher, Subject, Class}
+	alias CrmCore.{Teacher, Subject, Class, Notice}
+
+	def teacher_dashboard(teacher = %Teacher{id: teacher_id}) do
+		%{
+			teacher: teacher(teacher),
+			lessons: lessons(teacher),
+			notices: notices()
+		}
+	end
+
+	def notices() do
+		{:ok, [%Notice{id: 1, title: "Notice Title", description: "Notice description", summary: "Summary of desription"}]}
+	end
 
 	def teacher(%Teacher{id: teacher_id}) do
 		current_impl().teacher(teacher_id)
